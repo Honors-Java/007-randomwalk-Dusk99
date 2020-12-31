@@ -10,13 +10,43 @@ int y = 200;
 
 void setup() {
 	size(500, 500);
-  frameRate(10);
+  frameRate(30);
 }
 
 void draw() {
-	stroke(1);
+  if (steps < n){
+	int r = (int)(Math.random() * 4);
+  }
+  fill(255);
+  stroke(1);
   //starts random walking from 200,200
   rect(x, y, 10, 10);
+  
+  if (r == 0){
+    x = x + 10
+    fill(0,0,255)
+    rect(x, y, 10, 10);
+    steps = steps + 1
+  }
+  else if (r == 1){
+    x = x - 10
+    fill(0,0,255)
+    rect(x, y, 10, 10);
+    steps = steps + 1
+  }
+  if (r == 2){
+    y = y + 10
+    fill(0,0,255)
+    rect(x, y, 10, 10);
+    steps = steps + 1
+  }
+  if (r == 3){
+    y = y - 10
+    fill(0,0,255)
+    rect(x, y, 10, 10);
+    steps = steps + 1
+  }
+  
   
   //Here is where you should create the new rectangles to create the illusion of 'random walking'
   // You will need to make sure you dont draw more rectangles than the limit of steps
